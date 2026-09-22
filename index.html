@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#09090b" />
+  <meta name="description" content="A cinematic birthday surprise for Uzair, made by his bro." />
+  <title>UZair // Birthday Mode</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <div class="opening" id="opening" role="dialog" aria-label="Birthday surprise intro">
+    <div class="opening-bg"></div>
+    <div class="opening-top"><span>UZ // 21 OCTOBER</span><span>PRIVATE DROP / 001</span></div>
+    <div class="opening-content">
+      <p class="eyebrow reveal-in">A MESSAGE FROM THE INNER CIRCLE</p>
+      <div class="opening-copy">
+        <p class="intro-line" id="introLine">YO UZAIR...</p>
+        <p class="intro-line hidden-intro" id="introLineTwo">BIRTHDAY BOY HAS ENTERED THE CHAT <span>🔥</span></p>
+        <p class="intro-sub hidden-intro" id="introSub">I made something for you, bro.</p>
+      </div>
+      <button class="primary-button hidden-intro" id="openSurprise">OPEN THE SURPRISE <span>→</span></button>
+    </div>
+    <div class="opening-player"><span class="player-dot"></span><span>PLAYING: BIRTHDAY MODE</span><span class="equalizer mini" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></div>
+  </div>
+
+  <main class="site-shell" id="mainContent" aria-hidden="true">
+    <nav class="nav container">
+      <a class="wordmark" href="#top">UZ<span>.</span></a>
+      <div class="nav-meta"><span class="status-dot"></span> BIRTHDAY MODE <span class="nav-divider"></span> 21 OCTOBER</div>
+      <button class="nav-jump" data-scroll="#music" aria-label="Jump to music player">LISTEN <span>↘</span></button>
+    </nav>
+
+    <header class="hero container" id="top">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">THE MAIN CHARACTER'S DAY / 21 OCTOBER</p>
+        <h1>HAPPY BIRTHDAY,<br /><em>UZAIR</em> <span>🥂🔥</span></h1>
+        <p class="hero-sub">Another year older... but still the same <strong>pagal bro</strong> 😂</p>
+        <div class="hero-actions">
+          <button class="primary-button" id="turnUp">TURN UP THE VOLUME <span>↗</span></button>
+          <span class="micro-copy">Press play. Volume up. Regrets down.</span>
+        </div>
+      </div>
+      <div class="hero-stage reveal reveal-delay" aria-label="Animated birthday cake">
+        <div class="stage-ring ring-one"></div><div class="stage-ring ring-two"></div>
+        <div class="stage-label">BIRTHDAY<br />BOY<br /><span>///</span></div>
+        <div class="cake-wrap">
+          <div class="flame flame-a"></div><div class="flame flame-b"></div><div class="flame flame-c"></div>
+          <div class="candle candle-a"></div><div class="candle candle-b"></div><div class="candle candle-c"></div>
+          <div class="cake-top"></div><div class="cake-icing"></div><div class="cake-body"><span></span><span></span><span></span></div><div class="cake-plate"></div>
+        </div>
+        <div class="spark spark-one">✦</div><div class="spark spark-two">✦</div><div class="spark spark-three">✦</div>
+      </div>
+    </header>
+
+    <section class="section player-section container" id="music">
+      <div class="section-kicker reveal"><span>01</span><span>UZAIR'S WORLD</span><span class="rule"></span><span>NOW PLAYING</span></div>
+      <div class="player glass reveal reveal-delay">
+        <div class="album-art" id="albumArt" aria-label="Album cover visualizer">
+          <div class="album-disc"><span>UZ</span></div>
+          <div class="album-grid"></div>
+          <small>BDAY / 001</small>
+        </div>
+        <div class="track-info">
+          <p class="track-status"><span class="status-dot"></span> NOW PLAYING</p>
+          <div class="track-title-wrap">
+            <h2 id="trackTitle" class="track-title">Birthday Mode <span>🔥</span></h2>
+          </div>
+          <p>for the loudest bro in the room</p>
+        </div>
+        <div class="player-controls">
+          <button class="round-button" id="prevButton" aria-label="Previous song">⏮</button>
+          <button class="round-button" id="playButton" aria-label="Play birthday music">▶</button>
+          <button class="round-button" id="nextButton" aria-label="Next song">⏭</button>
+          <button class="icon-button" id="muteButton" aria-label="Mute music">VOL</button>
+          <div class="equalizer" id="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+      <label class="track-picker reveal" for="trackSelect">SELECT TRACK <select id="trackSelect"><option value="birthday.mp3">Track 01 - Birthday Mode 🔥</option><option value="track-1.mp3">Track 02 - track-1</option><option value="track-2.mp3">Track 03 - track-2</option><option value="track-3.mp3">Track 04 - track-3</option><option value="track-4.mp3">Track 05 - track-4</option></select></label>
+      <p class="player-note reveal">Bro has two moods: music ON and music LOUDER. 😂</p>
+      <audio id="birthdayAudio" preload="auto"><source src="assets/birthday.mp3" type="audio/mpeg" /></audio>
+    </section>
+
+    <section class="section archives-section container" id="archives">
+      <div class="section-heading reveal"><div><p class="eyebrow">THE PHOTO DUMP / NO CONTEXT REQUIRED</p><h2>THE BRO ARCHIVES <span>📸</span></h2></div><p class="section-note">Six frames. A suspicious amount of evidence.</p></div>
+      <div class="archive-grid">
+        <figure class="memory-card reveal"><img src="assets/797887210_1075705141990475_1536160417823466040_n.jpg" alt="Uzair memory photo 1" /><figcaption><span>01</span>Certified Bakchodi 😂</figcaption></figure>
+        <figure class="memory-card reveal reveal-delay"><img src="assets/811056234_834470816424884_3466537040000252427_n.jpg" alt="Uzair memory photo 2" /><figcaption><span>02</span>Bro thought this was a good idea 💀</figcaption></figure>
+        <figure class="memory-card reveal"><img src="assets/811615844_1088330470822394_4757257316403194110_n.jpg" alt="Uzair memory photo 3" /><figcaption><span>03</span>The memories nobody needs to know about.</figcaption></figure>
+        <figure class="memory-card reveal reveal-delay"><img src="assets/813633854_28337633935900832_3315130323208389728_n.jpg" alt="Uzair memory photo 4" /><figcaption><span>04</span>Same idiots, different day.</figcaption></figure>
+        <figure class="memory-card reveal"><img src="assets/815037928_2015166029137957_7715391470375047494_n.jpg" alt="Uzair memory photo 5" /><figcaption><span>05</span>Too much madness in one picture 🔥</figcaption></figure>
+        <figure class="memory-card reveal reveal-delay"><img src="assets/817985139_28220208137589061_4408909526905555126_n.jpg" alt="Uzair memory photo 6" /><figcaption><span>06</span>One for the archives.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section message-section container">
+      <div class="message-mark">“</div><div class="message-copy reveal"><p class="eyebrow">FROM THE OTHER IDIOT</p><h2>A MESSAGE<br /><em>FROM YOUR BRO</em></h2><div class="typewriter" id="typewriter" aria-live="polite"></div><p class="signature">— your bro, always ❤️🔥</p></div>
+    </section>
+
+    <section class="section starter-section container">
+      <div class="section-heading reveal"><div><p class="eyebrow">LOADING PERSONALITY PROFILE...</p><h2>UZAIR STARTER PACK <span>💀</span></h2></div><p class="section-note">Tap the cards. We ran the diagnostics.</p></div>
+      <div class="starter-grid">
+        <button class="starter-card reveal" data-card-message="The aux is legally his now."><span>🎧</span><strong>Music 24/7</strong><small>tap for diagnosis</small></button>
+        <button class="starter-card reveal reveal-delay" data-card-message="No situation has ever been too serious."><span>😂</span><strong>Unlimited Bakchodi</strong><small>tap for diagnosis</small></button>
+        <button class="starter-card reveal" data-card-message="Certified main character behaviour."><span>🔥</span><strong>Aujla Mode Activated</strong><small>tap for diagnosis</small></button>
+        <button class="starter-card reveal reveal-delay" data-card-message="Chill is currently unavailable."><span>😎</span><strong>Zero Chill</strong><small>tap for diagnosis</small></button>
+        <button class="starter-card reveal" data-card-message="A balanced diet is a future problem."><span>🍕</span><strong>Food = Priority</strong><small>tap for diagnosis</small></button>
+        <button class="starter-card reveal reveal-delay" data-card-message="Feature not found. Try again never."><span>💀</span><strong>Common Sense = Optional</strong><small>tap for diagnosis</small></button>
+      </div>
+      <div class="diagnostic" id="diagnostic">SELECT A TRAIT TO RUN DIAGNOSTICS <span>↗</span></div>
+    </section>
+
+    <section class="section timeline-section container">
+      <div class="section-heading reveal"><div><p class="eyebrow">THE UNOFFICIAL DOCUMENTARY</p><h2>FROM DAY ONE<br /><em>TO FOREVER</em> 🤝</h2></div></div>
+      <div class="timeline">
+        <article class="timeline-item reveal"><span class="timeline-number">01</span><div><p>DAY ONE</p><h3>How this madness started...</h3></div></article>
+        <article class="timeline-item reveal"><span class="timeline-number">02</span><div><p>THE FIRST CRAZY MEMORY</p><h3>Things were never normal after this.</h3></div></article>
+        <article class="timeline-item reveal"><span class="timeline-number">03</span><div><p>THE LEGENDARY MOMENTS</p><h3>Too many to count.</h3></div></article>
+        <article class="timeline-item reveal"><span class="timeline-number">04</span><div><p>THE BRO CODE</p><h3>Trust. Loyalty. Bakchodi.</h3></div></article>
+        <article class="timeline-item timeline-today reveal"><span class="timeline-number">05</span><div><p>TODAY / 21 OCTOBER</p><h3>HAPPY BIRTHDAY UZAIR 🎂🔥</h3></div></article>
+      </div>
+    </section>
+
+    <section class="secret-section container reveal"><div class="secret-copy"><p class="eyebrow">CLASSIFIED / FOR UZAIR ONLY</p><h2>Bro... there's<br /><em>one more thing</em> 👀</h2><button class="outline-button" id="secretButton">UNLOCK THE FILE <span>→</span></button></div><div class="secret-stamp">TOP<br />SECRET</div></section>
+
+    <section class="section final-section container" id="finale">
+      <p class="eyebrow reveal">THE LAST TRACK / MAKE IT COUNT</p><h2 class="reveal">MAKE A WISH,<br /><em>BRO</em> 🎂</h2>
+      <div class="final-cake-area reveal reveal-delay"><div class="final-cake"><div class="final-flames"><i></i><i></i><i></i></div><div class="final-candles"><i></i><i></i><i></i></div><div class="icing-line"></div><div class="final-cake-body"></div><div class="final-plate"></div></div></div>
+      <button class="primary-button blow-button reveal" id="blowButton">BLOW OUT THE CANDLES <span>🕯️</span></button>
+      <div class="final-message" id="finalMessage"><p class="eyebrow">THE FINAL VERDICT IS IN</p><h3>HAPPY BIRTHDAY UZAIR <span>🔥🥂</span></h3><p>STAY REAL. STAY CRAZY. KEEP WINNING. 🤝</p><small>— FROM YOUR BRO ❤️</small></div>
+    </section>
+
+    <footer class="footer container"><span>MADE WITH MAXIMUM BRO-CODE ENERGY</span><span>UZ // 2026</span></footer>
+  </main>
+
+  <div class="secret-modal" id="secretModal" aria-hidden="true"><div class="modal-panel"><button class="modal-close" id="closeModal" aria-label="Close">×</button><p class="eyebrow">MESSAGE DECRYPTED</p><h2>NO MATTER HOW OLD WE GET...</h2><h3>THE BAKCHODI IS NEVER ENDING. 😂🔥</h3><p>HAPPY BIRTHDAY, UZAIR ❤️</p></div></div>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
